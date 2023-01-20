@@ -1,14 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
-import App from "./App";
+import { App } from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { Global } from "@emotion/react";
+import { globalStyle } from "./style/globalStyle";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
+    <Global styles={globalStyle} />
     <App />
   </React.StrictMode>
 );
